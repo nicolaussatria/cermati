@@ -1,0 +1,302 @@
+:root {
+    --blue: #007bc1;
+    --dark-blue: #004a75;
+    --orange: #ff8000;
+    --dark-orange: #cc6600;
+    --text-black: #111;
+    --text-grey: #666;
+    --smoke-grey: #e5e5e5;
+    --white: #fff;
+    --light-grey: #b3b3b3;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: var(--smoke-grey);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", Arial, sans-serif;
+    color: var(--text-black);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 400;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 33px;
+}
+
+h2 {
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+button {
+    font-size: 1rem;
+}
+
+section p {
+    color: var(--text-grey);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+button {
+    all: unset;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+input {
+    padding: 0.25rem 0.5rem;
+}
+
+a {
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+
+#panel-top {
+    background-color: var(--smoke-grey);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    max-height: 150px;
+    transition: max-height 500ms ease;
+    overflow: hidden;
+}
+#panel-top div {
+    padding: 0.5rem;
+    max-width: 720px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+#panel-top.hide {
+    max-height: 0;
+}
+
+#panel-top button {
+    background-color: var(--blue);
+    color: var(--white);
+    flex-shrink: 0;
+    padding: 0.35rem 0.75rem;
+    line-height: 1rem;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+#panel-bottom {
+    background-color: var(--blue);
+    padding: 1rem;
+    color: var(--white);
+    position: relative;
+    max-width: 640px;
+    position: fixed;
+    bottom: 0;
+    transition: bottom 0.5s ease;
+}
+#panel-bottom.hide {
+    bottom: -300px;
+}
+#panel-bottom h4 {
+    font-size: 1.2rem;
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+#panel-bottom button[type="button"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    line-height: 1rem;
+}
+#panel-bottom form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+#panel-bottom button[type="submit"] {
+    background-color: var(--orange);
+    padding: 0.25rem 2rem;
+    margin-top: 0.5rem;
+}
+#panel-bottom p {
+    color: var(--white);
+    font-size: 0.8rem;
+}
+
+#logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+#hero {
+    background-image: url("./assets/work-desk__dustin-lee.jpg");
+    background: var(--dark-blue) url("./assets/work-desk__dustin-lee.jpg")
+        center center no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    position: relative;
+    min-height: 500px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 130px 24px 90px 24px;
+}
+
+#hero h3 {
+    font-weight: 600;
+}
+
+#hero button {
+    margin-top: 1.5rem;
+    align-self: center;
+    color: var(--white);
+    border: 2px solid var(--white);
+    padding: 0.85em 1.3em;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 300ms ease, color 300ms ease;
+    transition-duration: 300ms;
+}
+#hero button:hover {
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+#hero p {
+    font-size: 18px;
+    margin-top: 0.75rem;
+    color: var(--white);
+}
+
+.content {
+    padding: 2rem 1.5rem;
+}
+
+.center {
+    text-align: center;
+}
+
+#services {
+    max-width: 1366px;
+    margin: auto;
+}
+
+#service header {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+article {
+    border: 1px solid var(--light-grey);
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+article h4 {
+    font-weight: 500;
+    text-align: left;
+    font-size: 1.5rem;
+    color: var(--text-grey);
+    margin-bottom: 0.5rem;
+}
+
+article i {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    color: var(--light-grey);
+    font-size: 1.7rem;
+}
+
+footer {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-size: 0.8rem;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 480px) {
+    #service-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    article {
+        margin-bottom: 0;
+    }
+    #panel-bottom form {
+        flex-direction: row;
+    }
+    #panel-bottom input {
+        flex-grow: 1;
+    }
+    #panel-bottom button[type="submit"] {
+        margin-top: 0;
+        margin-left: 0.5rem;
+    }
+    #panel-top div {
+        flex-direction: row;
+    }
+    #panel-top button {
+        margin-top: 0;
+        margin-left: 0.5rem;
+        align-self: center;
+    }
+}
+@media screen and (min-width: 960px) {
+    #service-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}
